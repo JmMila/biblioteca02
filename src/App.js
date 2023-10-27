@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+
+
+import AppForm from "./components/AppForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Jaqueline Milagros <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{background:"yellow", 
+    width:"350px", 
+    padding:"10px"}}>
+      <AppForm/>
+      <i class="large material-icons">child_care</i>
+
+      <p class="text-dark">1. juan manuel 23 masculino ----  x  - A</p>
+      <p class="text-dark">2. rosa maria 28 Femenino  ------ x  - A</p>
+      <p class="text-dark">3. bryan david 30 masculino ----  x  - A</p>
     </div>
   );
 }
