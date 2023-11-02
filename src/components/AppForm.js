@@ -77,18 +77,18 @@ const Appform = (props) => {
     console.log(name, value);
 
     setObjeto({...objeto, [name]:value});
-    console.log("nnnnn");
+    console.log("nnnn");
   }
 
   return (
     <div style={{background:"fuchsia", padding:"10px", textAlign:"center"}}>
-      <h2>AppForm.js</h2> <br/> 
+      <h>AppForm.js</h> <br/> 
       <form onSubmit={manejarEnvio} >
-        <input onChange={manejarCambiosEntrada} value={objeto.nombre} name='nombre' type='text' placeholder='Nombres...'></input><br></br><br></br>
-        <input onChange={manejarCambiosEntrada} value={objeto.edad} name='edad' type='text' placeholder='Edad...'></input><br></br><br></br>
+        <input onChange={manejarCambiosEntrada} value={objeto.nombre} name='nombre' type='text' placeholder='Nombres...'></input><br></br>
+        <input onChange={manejarCambiosEntrada} value={objeto.edad} name='edad' type='text' placeholder='Edad...'></input><br></br>
         <input onChange={manejarCambiosEntrada} value={objeto.genero} name='genero' type='text' placeholder='Género...'></input><br></br>
         <br></br>
-        <button type="button" class="btn btn-dark">
+        <button>
           {props.idActual === ""? "Guardar" : "Actualizar"}
         </button>
       </form>
