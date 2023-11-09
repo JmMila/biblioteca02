@@ -8,7 +8,7 @@ const Appform = (props) => {
 
 
 ////// GUARDAR / ACTUALIZAR /////
-  const manejarEnvio = async (e) => {
+  const manejarEnvio = async (e) => { //manejar envios trabaja para guardar y para actualizar 
     e.preventDefault();
     try {
       if(props.idActual ===""){
@@ -35,12 +35,12 @@ const Appform = (props) => {
   useEffect(() => {
     if ( props.idActual === "") {
       setObjeto({...camposRegistro});
-    } else {
-      obtenerDatosporId(props.idActual);
+    } else { //caso contrario
+      obtenerDatosporId(props.idActual); 
     }
   }, [props.idActual]);
 
-  const obtenerDatosporId = async (xId) =>{
+  const obtenerDatosporId = async (xId) =>{ 
     //console.log("xId ", xId);
     const objPorId = doc(db, "persona", xId);
     const docPorId = await getDoc(objPorId);
@@ -48,7 +48,7 @@ const Appform = (props) => {
       //console log("Datos de doc... ", docPorId.data());
       setObjeto(docPorId.data());
     } else {
-      console.log("No hay doc... ");
+      console.log("No hay documentos... ");
     }
   }
 
